@@ -18,7 +18,18 @@ for training the neuron the perceptron learning rule is used.
 																					 
 The Perceptron learning rule is,
 
+		e = y_target – y_actual
 		W_new = W_old +(e*x)
 		b_new = b_old + e
+		
+		x: input
+		e: error
+ for single neuron, single input the newtwork will be as below,
+			
+The activation/transfer functions used are, linear, sigmoid, hard limit. The activation functions are also modified depending upon required output. Some of them are shown below,
+
+
+ 
+
 																
 		
