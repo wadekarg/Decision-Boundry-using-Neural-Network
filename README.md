@@ -81,6 +81,8 @@ References:
 
 An interactive playground to explore how perceptrons create decision boundaries. Built with **Angular 19** and styled as a hand-drawn notebook/sketch aesthetic using **rough.js**.
 
+**Live Demo:** https://wadekarg.github.io/Decision-Boundry-using-Neural-Network/#/
+
 ## Features
 
 - **4 Interactive Learn Chapters** — from "What is a Perceptron?" to the learning rule
