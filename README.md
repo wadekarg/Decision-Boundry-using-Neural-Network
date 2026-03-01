@@ -99,23 +99,6 @@ An interactive playground to explore how perceptrons create decision boundaries.
 - KaTeX (math rendering)
 - Hash routing for GitHub Pages
 
-## Development
-
-```bash
-npm install
-ng serve
-```
-
-Navigate to `http://localhost:4200/`.
-
-## Build
-
-```bash
-ng build --configuration production
-```
-
-Output is in `dist/browser/`.
-
 ## Origin
 
 Based on a Neural Network class assignment at UT Arlington (Dr. Farhad Kamangar). Interactive web application vibe-coded in March 2026 by **Gajanan Wadekar**.
