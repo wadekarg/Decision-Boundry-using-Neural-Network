@@ -1,18 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Input lines -->
   <line x1="2" y1="6" x2="14" y2="15" stroke="#2B5C8A" stroke-width="2" stroke-linecap="round"/>
   <line x1="2" y1="16" x2="14" y2="16" stroke="#2B5C8A" stroke-width="2" stroke-linecap="round"/>
   <line x1="2" y1="26" x2="14" y2="17" stroke="#2B5C8A" stroke-width="2" stroke-linecap="round"/>
-  <!-- Output line -->
   <line x1="22" y1="16" x2="30" y2="16" stroke="#27AE60" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Neuron body -->
   <circle cx="18" cy="16" r="6" fill="#2B5C8A"/>
-  <!-- Sigma symbol -->
-  <text x="18" y="19.5" text-anchor="middle" fill="white" font-family="sans-serif" font-size="9" font-weight="700">&#x3A3;</text>
-  <!-- Input dots -->
+  <text x="18" y="19.5" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="9" font-weight="700">&#931;</text>
   <circle cx="3" cy="6" r="2" fill="#2B5C8A" opacity="0.6"/>
   <circle cx="3" cy="16" r="2" fill="#2B5C8A" opacity="0.6"/>
   <circle cx="3" cy="26" r="2" fill="#2B5C8A" opacity="0.6"/>
-  <!-- Output dot -->
   <circle cx="30" cy="16" r="2" fill="#27AE60"/>
 </svg>
