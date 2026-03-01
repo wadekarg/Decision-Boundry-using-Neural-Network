@@ -1,0 +1,31 @@
+// ── Notebook/Sketch Color Palette ──
+$cream:          #FDF6E3;
+$cream-dark:     #F5EDDA;
+$pencil-grey:    #4A4A4A;
+$pencil-light:   #8B8B8B;
+$ink-blue:       #2B5C8A;
+$ink-blue-light: #3A7BC8;
+$red-pen:        #C0392B;
+$green-ink:      #27AE60;
+$yellow-marker:  #F39C12;
+$margin-red:     #E8D0D0;
+$grid-blue:      rgba(173, 216, 230, 0.3);
+
+// ── Shadows ──
+$shadow-sm: 2px 2px 4px rgba(0, 0, 0, 0.06);
+$shadow-md: 3px 3px 8px rgba(0, 0, 0, 0.08);
+$shadow-lg: 5px 5px 15px rgba(0, 0, 0, 0.1);
+
+// ── Sketch border radii ──
+$sketch-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+$sketch-radius-alt: 15px 255px 15px 225px / 225px 15px 255px 15px;
+$sketch-radius-sm: 30px 5px 25px 5px / 5px 25px 5px 30px;
+
+// ── Spacing ──
+$nav-height: 60px;
+
+// ── Breakpoints ──
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;

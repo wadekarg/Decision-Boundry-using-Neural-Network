@@ -1,0 +1,63 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// ── Sticky note base ──
+.sticky-note {
+  position: relative;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  border-radius: 2px 2px 2px 2px;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.08);
+  transform: rotate(-0.5deg);
+
+  // Tape strip
+  &::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(1deg);
+    width: 60px;
+    height: 14px;
+    background: rgba(255, 255, 200, 0.7);
+    border: 1px solid rgba(200, 200, 150, 0.4);
+    border-radius: 1px;
+  }
+
+  .sticky-label {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.35rem;
+  }
+
+  .sticky-body {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+// ── Variants ──
+.sticky-insight {
+  @extend .sticky-note;
+  background: color.adjust($green-ink, $lightness: 48%);
+  border-left: 4px solid $green-ink;
+  .sticky-label { color: $green-ink; }
+}
+
+.sticky-think {
+  @extend .sticky-note;
+  background: color.adjust($yellow-marker, $lightness: 38%);
+  border-left: 4px solid $yellow-marker;
+  .sticky-label { color: color.adjust($yellow-marker, $lightness: -10%); }
+}
+
+.sticky-try {
+  @extend .sticky-note;
+  background: color.adjust($ink-blue, $lightness: 48%);
+  border-left: 4px solid $ink-blue;
+  .sticky-label { color: $ink-blue; }
+}

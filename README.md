@@ -8,26 +8,26 @@ The task:
   2. Draw a decision boundary between them if these points are linearly separable.
   3. Color the input space to green which corresponds to positive output
   4. Color the input space to red which corresponds to negative output
-  
+
 for training the neuron the perceptron learning rule is used.
-		the equation of line is 
-		
+		the equation of line is
+
 	y=Wx+b where y: output
 			w: weight
 			b: bias
-																					 
+
 The Perceptron learning rule is,
 
 		e = y_target – y_actual
 		W_new = W_old +(e*x)
 		b_new = b_old + e
-		
+
 		x: input
 		e: error
  for single neuron, single input the newtwork will be as below,
- 
+
  ![alt text](/images/single_neuron.png)
-			
+
 The activation/transfer functions used are, linear, sigmoid, hard limit. The activation functions are also modified depending upon required output. Some of them are shown below,
 
 ![alt text](/images/activation%20functions.PNG)
@@ -39,11 +39,11 @@ The target output is given for the points randomly as +1 for positive class and 
 ![alt text](/images/graph_plot_1.PNG)
 
 The graphic window is created using tkinter and matplotlib.
-There are 3 sliders for w1, w2 and bias. 
-Two buttons are for creating a random data points and for another is for training the network. 
+There are 3 sliders for w1, w2 and bias.
+Two buttons are for creating a random data points and for another is for training the network.
 The dropdown list is for selecting the activation/transfer functions.
 
-For default, 
+For default,
 w1=1
 w2=1
 b=0
@@ -60,19 +60,67 @@ The weights and bias will also get updated while training.
 
 ![alt text](/images/graph_plot_3.PNG)
 
-The linearly inseparable data can not be classified by using perceptron learning rule. As the data is getting generated randomly is it possible that sometime data points are linearly inseparable. 
+The linearly inseparable data can not be classified by using perceptron learning rule. As the data is getting generated randomly is it possible that sometime data points are linearly inseparable.
 
 ![alt text](/images/graph_plot_4.PNG)
 
-While using the linear transfer function, the weights and bias get updated to large number due to which linear transfer function doesn’t work as required. Here hard limit and sigmoid works well.
+While using the linear transfer function, the weights and bias get updated to large number due to which linear transfer function doesn't work as required. Here hard limit and sigmoid works well.
 
 ![alt text](/images/error.PNG)
 
 
 How to run: Run the wadekar_02_01.py
 
- 
+
 References:
 1. The transfer function image is taken from Neural Network Design Book by Martin T. Hagan
-																
-		
+
+---
+
+# The Perceptron Lab
+
+An interactive playground to explore how perceptrons create decision boundaries. Built with **Angular 19** and styled as a hand-drawn notebook/sketch aesthetic using **rough.js**.
+
+## Features
+
+- **4 Interactive Learn Chapters** — from "What is a Perceptron?" to the learning rule
+- **Interactive Lab** — add data points, adjust weights, pick activation functions, watch training
+- **4 Activation Functions** — Hard Limit, Symmetrical Hard Limit, Linear, Tanh
+- **4 Dataset Presets** — linearly separable, XOR, clusters, circular
+- **Step-by-step Training** — view every weight update with full KaTeX math breakdowns
+- **Hand-drawn Visuals** — rough.js canvas rendering for boundary lines, data points, and charts
+
+## Tech Stack
+
+- Angular 19 (standalone components, signals, new control flow)
+- TypeScript (strict)
+- SCSS (custom notebook theme)
+- rough.js (hand-drawn canvas effects)
+- KaTeX (math rendering)
+- Hash routing for GitHub Pages
+
+## Development
+
+```bash
+npm install
+ng serve
+```
+
+Navigate to `http://localhost:4200/`.
+
+## Build
+
+```bash
+ng build --configuration production
+```
+
+Output is in `dist/browser/`.
+
+## Origin
+
+Based on a Neural Network class assignment at UT Arlington (Dr. Farhad Kamangar). Interactive web application vibe-coded in March 2026 by **Gajanan Wadekar**.
+
+## Recent Changes
+
+- **Animated Neuron vs Perceptron Comparison** (Ch 1, Section 1) — Side-by-side SVG diagrams with synchronized CSS animations showing signal flow through a biological neuron (branching dendrites, soma, myelinated axon with saltatory conduction, synaptic boutons) and a perceptron (inputs, weighted connections, summation, activation, output). Includes mapping legend and original info cards.
+- **Factual review** — All Chapter 1 content verified for accuracy; fixed activation function terminology (hard limit → symmetrical hard limit) in the anatomy widget.

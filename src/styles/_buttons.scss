@@ -1,0 +1,102 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// ── Base button ──
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1rem;
+  border: 2px solid $pencil-grey;
+  border-radius: $sketch-radius-sm;
+  background: $cream-dark;
+  color: $pencil-grey;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+// ── Variants ──
+.btn-ink {
+  @extend .btn;
+  background: $ink-blue;
+  border-color: color.adjust($ink-blue, $lightness: -10%);
+  color: white;
+
+  &:hover { background: $ink-blue-light; }
+}
+
+.btn-green {
+  @extend .btn;
+  border-color: $green-ink;
+  color: $green-ink;
+  &:hover { background: color.adjust($green-ink, $lightness: 48%); }
+}
+
+.btn-red {
+  @extend .btn;
+  border-color: $red-pen;
+  color: $red-pen;
+  &:hover { background: color.adjust($red-pen, $lightness: 42%); }
+}
+
+.btn-yellow {
+  @extend .btn;
+  border-color: $yellow-marker;
+  color: color.adjust($yellow-marker, $lightness: -10%);
+  &:hover { background: color.adjust($yellow-marker, $lightness: 38%); }
+}
+
+// ── Small variant ──
+.btn-sm {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+// ── Pill toggle (for activation/dataset selectors) ──
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.85rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1.5px solid color.adjust($cream-dark, $lightness: -12%);
+  border-radius: 20px;
+  background: $cream-dark;
+  color: $pencil-light;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: $ink-blue;
+    color: $ink-blue;
+  }
+
+  &.active {
+    background: $ink-blue;
+    border-color: $ink-blue;
+    color: white;
+  }
+}

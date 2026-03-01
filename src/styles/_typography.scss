@@ -1,0 +1,80 @@
+@use 'variables' as *;
+
+// ── Font stacks ──
+$font-hand:     'Caveat', cursive;
+$font-body:     'Patrick Hand', cursive;
+$font-ui:       'Inter', sans-serif;
+$font-mono:     'JetBrains Mono', monospace;
+
+body {
+  font-family: $font-ui;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $pencil-grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: $font-hand;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $pencil-grey;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+.font-body {
+  font-family: $font-body;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.font-mono {
+  font-family: $font-mono;
+  font-size: 0.85rem;
+}
+
+.font-ui {
+  font-family: $font-ui;
+}
+
+.text-muted {
+  color: $pencil-light;
+}
+
+.text-ink {
+  color: $ink-blue;
+}
+
+.text-red {
+  color: $red-pen;
+}
+
+.text-green {
+  color: $green-ink;
+}
+
+.text-yellow {
+  color: $yellow-marker;
+}
+
+a {
+  color: $ink-blue;
+  text-decoration: none;
+  &:hover {
+    color: $ink-blue-light;
+    text-decoration: underline;
+  }
+}
+
+// ── Section label (small caps header) ──
+.section-label {
+  font-family: $font-ui;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $pencil-light;
+}

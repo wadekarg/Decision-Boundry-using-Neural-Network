@@ -1,0 +1,58 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// ── Sketch borders (hand-drawn look) ──
+.sketch-border {
+  border: 2px solid $pencil-grey;
+  border-radius: $sketch-radius;
+}
+
+.sketch-border-light {
+  border: 1.5px solid color.adjust($cream-dark, $lightness: -12%);
+  border-radius: $sketch-radius;
+}
+
+.sketch-border-ink {
+  border: 2px solid $ink-blue;
+  border-radius: $sketch-radius;
+}
+
+// ── Torn paper edge (bottom) ──
+.torn-edge {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background:
+      linear-gradient(135deg, $cream-dark 33.33%, transparent 33.33%) 0 0,
+      linear-gradient(225deg, $cream-dark 33.33%, transparent 33.33%) 0 0;
+    background-size: 12px 8px;
+    background-repeat: repeat-x;
+  }
+}
+
+// ── Dashed pencil line ──
+.pencil-divider {
+  border: none;
+  border-top: 1.5px dashed color.adjust($cream-dark, $lightness: -15%);
+  margin: 1rem 0;
+}
+
+// ── Hand-drawn circle (for chapter numbers, etc.) ──
+.hand-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid $ink-blue;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  color: $ink-blue;
+}

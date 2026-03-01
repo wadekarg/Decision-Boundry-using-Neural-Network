@@ -1,0 +1,57 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// ── Graph Paper Background ──
+.graph-paper {
+  background-color: $cream;
+  background-image:
+    linear-gradient($grid-blue 1px, transparent 1px),
+    linear-gradient(90deg, $grid-blue 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+// ── Lined paper for learn pages ──
+.lined-paper {
+  background-color: $cream;
+  background-image:
+    repeating-linear-gradient(
+      transparent,
+      transparent 31px,
+      rgba(173, 216, 230, 0.25) 31px,
+      rgba(173, 216, 230, 0.25) 32px
+    );
+  padding-top: 8px;
+}
+
+// ── Notebook margin (red vertical line) ──
+.notebook-margin {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 60px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $margin-red;
+    z-index: 1;
+  }
+}
+
+// ── Notebook page card ──
+.notebook-card {
+  background: $cream-dark;
+  border: 1.5px solid color.adjust($cream-dark, $lightness: -8%);
+  border-radius: $sketch-radius;
+  box-shadow: $shadow-md;
+  padding: 1.5rem;
+}
+
+// ── Notebook panel (sidebar panels) ──
+.notebook-panel {
+  background: $cream-dark;
+  border: 1.5px solid color.adjust($cream-dark, $lightness: -8%);
+  border-radius: $sketch-radius-sm;
+  box-shadow: $shadow-sm;
+  padding: 1rem;
+}

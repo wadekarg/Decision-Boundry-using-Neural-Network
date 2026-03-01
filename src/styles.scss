@@ -1,0 +1,78 @@
+@use 'sass:color';
+@use 'styles/variables' as *;
+@use 'styles/typography';
+@use 'styles/notebook';
+@use 'styles/sketch';
+@use 'styles/sticky-notes';
+@use 'styles/buttons';
+@use 'styles/sliders';
+
+// ── Global reset ──
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $cream;
+  min-height: 100vh;
+}
+
+// ── Utility classes ──
+.container {
+  max-width: $bp-xl;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-sm {
+  max-width: $bp-md;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-md {
+  max-width: $bp-lg;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// ── KaTeX overrides for notebook theme ──
+.katex-display {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.katex {
+  font-size: 1.05em;
+}
+
+// ── Scrollbar styling ──
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $cream;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color.adjust($cream-dark, $lightness: -15%);
+  border-radius: 4px;
+  &:hover {
+    background: $pencil-light;
+  }
+}
+
+// ── Selection color ──
+::selection {
+  background: rgba($ink-blue, 0.2);
+  color: $pencil-grey;
+}
