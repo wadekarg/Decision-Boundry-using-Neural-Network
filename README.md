@@ -105,7 +105,3 @@ An interactive playground to explore how perceptrons create decision boundaries.
 
 Based on a Neural Network class assignment at UT Arlington (Dr. Farhad Kamangar). Interactive web application vibe-coded in March 2026 by **Gajanan Wadekar**.
 
-## Recent Changes
-
-- **Animated Neuron vs Perceptron Comparison** (Ch 1, Section 1) — Side-by-side SVG diagrams with synchronized CSS animations showing signal flow through a biological neuron (branching dendrites, soma, myelinated axon with saltatory conduction, synaptic boutons) and a perceptron (inputs, weighted connections, summation, activation, output). Includes mapping legend and original info cards.
-- **Factual review** — All Chapter 1 content verified for accuracy; fixed activation function terminology (hard limit → symmetrical hard limit) in the anatomy widget.
