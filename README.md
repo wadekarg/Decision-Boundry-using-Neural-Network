@@ -94,12 +94,12 @@ An interactive playground to explore how perceptrons create decision boundaries.
 
 ## Tech Stack
 
-- Angular 19 (standalone components, signals, new control flow)
-- TypeScript (strict)
-- SCSS (custom notebook theme)
-- rough.js (hand-drawn canvas effects)
-- KaTeX (math rendering)
-- Hash routing for GitHub Pages
+![Angular](https://img.shields.io/badge/Angular_19-DD0031?style=flat-square&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
+![rough.js](https://img.shields.io/badge/rough.js-hand--drawn_canvas-4A4A4A?style=flat-square)
+![KaTeX](https://img.shields.io/badge/KaTeX-math_rendering-008080?style=flat-square)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white)
 
 ## Origin
 
