@@ -68,12 +68,13 @@ import { TrainingChartComponent } from './training-chart.component';
 
       <!-- Grid layout -->
       <div class="lab-grid">
-        <!-- Left sidebar: controls -->
+        <!-- Left sidebar: controls + live math -->
         <div class="lab-sidebar-left">
           <app-weight-sliders />
           <app-activation-selector />
           <app-dataset-selector />
           <app-playback-controls />
+          <app-math-panel />
         </div>
 
         <!-- Center: canvas + chart -->
@@ -82,9 +83,8 @@ import { TrainingChartComponent } from './training-chart.component';
           <app-training-chart />
         </div>
 
-        <!-- Right sidebar: math + steps -->
+        <!-- Right sidebar: training breakdown -->
         <div class="lab-sidebar-right">
-          <app-math-panel />
           <app-step-breakdown />
         </div>
       </div>
