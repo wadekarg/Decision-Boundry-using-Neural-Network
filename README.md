@@ -94,12 +94,14 @@ An interactive playground to explore how perceptrons create decision boundaries.
 
 ## Tech Stack
 
-![Angular](https://img.shields.io/badge/Angular_19-DD0031?style=flat-square&logo=angular&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
-![rough.js](https://img.shields.io/badge/rough.js-hand--drawn_canvas-4A4A4A?style=flat-square)
-![KaTeX](https://img.shields.io/badge/KaTeX-math_rendering-008080?style=flat-square)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=github&logoColor=white)
+| Layer | Technology | Why |
+|:------|:-----------|:----|
+| **Framework** | ![Angular](https://img.shields.io/badge/Angular_19-DD0031?style=flat-square&logo=angular&logoColor=white) | Standalone components, signals API, new control flow — no NgModules boilerplate |
+| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) | Full type safety across the perceptron engine, training loop, and UI |
+| **Styling** | ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white) | Custom hand-drawn notebook theme — no CSS framework needed |
+| **Canvas** | ![rough.js](https://img.shields.io/badge/rough.js-4A4A4A?style=flat-square) | Sketch aesthetic for decision boundary lines, data points, and training charts |
+| **Math** | ![KaTeX](https://img.shields.io/badge/KaTeX-008080?style=flat-square) | Beautiful equation rendering in the live math and step breakdown panels |
+| **Deploy** | ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white) | Automatic via GitHub Actions on push to `master`, hash routing for SPA |
 
 ## Origin
 
