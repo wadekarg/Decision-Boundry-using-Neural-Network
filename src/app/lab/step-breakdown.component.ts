@@ -83,25 +83,6 @@ import type { TrainingStep, EpochResult } from '../engine/types';
               </tbody>
             </table>
 
-            <!-- Boundary equation at end of epoch -->
-            <div class="detail-box boundary-eq">
-              <p class="math-label">Decision Boundary After Epoch {{ epochIdx() + 1 }}</p>
-              <app-katex [tex]="epochBoundaryEqTex(ep)" />
-            </div>
-
-            <!-- Per-point summary for this epoch -->
-            <div class="point-list">
-              <p class="math-label">Points in This Epoch</p>
-              @for (s of ep.steps; track $index) {
-                <div class="point-row" [class.correct]="isCorrectSide(s)" [class.wrong]="!isCorrectSide(s)">
-                  <span class="point-idx">#{{ $index + 1 }}</span>
-                  <span class="point-coords">({{ fmt(s.point.x1) }}, {{ fmt(s.point.x2) }})</span>
-                  <span class="point-target" [class.text-green]="s.point.label === 1" [class.text-red]="s.point.label === -1">t={{ s.point.label }}</span>
-                  <span class="point-output">y={{ fmt(s.output) }}</span>
-                  <span class="point-err" [class.text-red]="hasError(s)">e={{ fmt(s.error) }}</span>
-                </div>
-              }
-            </div>
           }
         }
 

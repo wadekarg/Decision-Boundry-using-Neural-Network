@@ -9,6 +9,7 @@ import { PlaybackControlsComponent } from './playback-controls.component';
 import { MathPanelComponent } from './math-panel.component';
 import { StepBreakdownComponent } from './step-breakdown.component';
 import { TrainingChartComponent } from './training-chart.component';
+import { EpochSummaryComponent } from './epoch-summary.component';
 
 @Component({
   selector: 'app-lab-page',
@@ -22,6 +23,7 @@ import { TrainingChartComponent } from './training-chart.component';
     MathPanelComponent,
     StepBreakdownComponent,
     TrainingChartComponent,
+    EpochSummaryComponent,
   ],
   template: `
     <div class="container lab-container">
@@ -68,13 +70,13 @@ import { TrainingChartComponent } from './training-chart.component';
 
       <!-- Grid layout -->
       <div class="lab-grid">
-        <!-- Left sidebar: controls + live math -->
+        <!-- Left sidebar: controls + epoch summary -->
         <div class="lab-sidebar-left">
           <app-weight-sliders />
           <app-activation-selector />
           <app-dataset-selector />
           <app-playback-controls />
-          <app-math-panel />
+          <app-epoch-summary />
         </div>
 
         <!-- Center: canvas + chart -->
@@ -83,8 +85,9 @@ import { TrainingChartComponent } from './training-chart.component';
           <app-training-chart />
         </div>
 
-        <!-- Right sidebar: training breakdown -->
+        <!-- Right sidebar: math + training breakdown -->
         <div class="lab-sidebar-right">
+          <app-math-panel />
           <app-step-breakdown />
         </div>
       </div>
